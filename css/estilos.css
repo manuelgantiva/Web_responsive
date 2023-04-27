@@ -6,6 +6,12 @@ html {
     font-size: 14px;
     font-family: arial;
     scroll-behavior: smooth;
+   
+}
+
+*{
+    text-decoration: none;
+    list-style: none;
     margin: 0;
     padding: 0;
 }
@@ -18,5 +24,88 @@ html {
 
 body{
     background-color: #f5f5f5;
+}
+
+div.Header{
+    height: 100vh;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 100%;
+    grid-template-rows: 15% 85%;
+    background: url(/Imagenes/Fondo\ 1.png);
+    background-size: cover;
+    background-position: center center;
+}
+
+header{
+    order: 2;
+}
+
+nav{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+nav img{
+    margin: 0px 50px;
+    width: 10vh;
+}
+
+nav ul{
+    margin: 0px 40px;
+    flex-grow: 1;
+    display: flex;
+    justify-content: end;
+    gap: 80px;
+}
+
+nav ul li a{
+    color: white;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+
+nav label{
+    order: 2;
+    display: none;
+}
+
+input#check{
+    display: none;
+}
+
+header{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+header h1{
+    color: white;
+    font-size: 25vh;
+    font-weight: bold;
+    padding: 0px 10vw;
+}
+
+header h1:first-child{
+    align-self: flex-start;
+}
+
+header h1:nth-child(2){
+    align-self: flex-end;
+}
+
+header a{
+    display: inline-block;
+    border: 2px solid white;
+    margin-top: 5vh;
+    color: white;
+    font-size: 1.5em;
+    padding: 20px;
+    border-radius: 30px;
 }
 
