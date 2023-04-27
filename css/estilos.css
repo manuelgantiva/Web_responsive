@@ -160,7 +160,56 @@ section.speakers>div>article>p{
     margin-top: 15px;
     width: 20vw;
     font-size: 1.2em;
-    
 }
 
+section.schedule{
+    height: 100vh;
+    display: flex;
+    flex-flow: row wrap;
+    background-color: #473DC6;
+    justify-content: center;
+}
+
+section.schedule h2 {
+    flex-basis: 100%;
+    height: 20vh;
+    display: grid;
+    place-items: center;
+    color: white;
+    font-size: 8em;
+}
+
+section.schedule>div{
+    height: 80vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-evenly;
+    align-items: center;
+    justify-items: center;
+}
+
+section.schedule>div>article{
+    width: 25vw;
+    text-align: center;
+    color: white;
+}
+
+section.schedule>div>article>hgroup>h3{
+    font-size: 5em;
+    margin-bottom: 30px;
+}
+
+section.schedule>div>article>hgroup>h4{
+    font-size: 1.5em;
+}
+
+section.schedule>div>article>p{
+    margin: 5px;
+    font-size: 1.2em;
+}
+
+section.schedule>div>article>p+p{
+    font-weight: bold;
+}
 
