@@ -6,7 +6,6 @@ html {
     font-size: 14px;
     font-family: arial;
     scroll-behavior: smooth;
-   
 }
 
 *{
@@ -50,9 +49,11 @@ nav{
 nav img{
     margin: 0px 50px;
     width: 10vh;
+    order: 0;
 }
 
 nav ul{
+    order: 2;
     margin: 0px 40px;
     flex-grow: 1;
     display: flex;
@@ -70,6 +71,10 @@ nav ul li a{
 nav label{
     order: 2;
     display: none;
+}
+
+span.material-symbols-outlined{
+    font-size: 80px;
 }
 
 input#check{
@@ -127,12 +132,11 @@ section.speakers h2 {
 }
 
 section.speakers>div{
-    height: 80vh;
     display: grid;
+    height: 80vh;
     grid-template-columns: repeat(3, 1fr);
     justify-content: center;
     align-items: center;
-
 }
 
 section.speakers>div>article{
@@ -143,7 +147,7 @@ section.speakers>div>article{
 }
 
 section.speakers>div>article>img{
-    width: 300px;
+    width: 50vh;
     border-radius: 50px;
     align-self: center;
 }
@@ -151,15 +155,15 @@ section.speakers>div>article>img{
 section.speakers>div>article>h3{
     color: #150E60;
     margin-top: 15px;
-    font-size: 1.6em;
+    font-size: 2em;
 }
 
 section.speakers>div>article>p{
     color: #150E60;
     align-self: center;
     margin-top: 15px;
-    width: 20vw;
-    font-size: 1.2em;
+    width: 30vw;
+    font-size: 1.8em;
 }
 
 section.schedule{
@@ -213,3 +217,120 @@ section.schedule>div>article>p+p{
     font-weight: bold;
 }
 
+@media (max-width: 920px){
+    body{
+        background-color: tomato;
+        width: 100vw;
+    }
+    div.Header{
+        width: 920px;
+        height: 100vh;
+    }
+
+    section.speakers{
+        width: 920px;
+        height: max-content;
+        flex-wrap: wrap;
+        flex-flow: column;
+        justify-items: center;
+        align-items: center;
+    }
+
+    section.schedule{
+        width: 920px;
+        height: max-content;
+        flex-wrap: wrap;
+        flex-flow: column;
+        justify-items: center;
+        align-items: center;
+    }
+
+    nav{
+        padding: 0;
+    }
+
+    .checkbtn{
+        display: block;
+        border: 1px solid white;
+        color: white;
+        position: fixed;
+        right: 10px;
+    }
+
+    nav ul{
+        position: fixed;
+        left: -110%;
+        width: 100%;
+        height: 60vh;
+        background-color: #473DC6;
+        top: 12vh;
+        text-align: center;
+        flex-direction: column;
+        justify-content: stretch;
+        align-items: stretch;
+        padding-top: 50px;
+        border: 2px solid white;
+        transition: all 0.5s;
+    }
+
+    #check:checked ~ ul {
+        left: -40px;
+    }
+
+    header h1{
+        color: white;
+        font-size: 20vh;
+        font-weight: bold;
+        padding: 0px 20vh;
+    }
+
+
+    section.speakers h2 {
+        flex-basis: 100%;
+        height: 20vh;
+        font-size: 4em;
+    }
+
+    section.speakers>div{
+        width: 920px;
+        height: auto;
+        padding: 30px;
+        display: flex;
+        flex-flow: column;
+        gap: 50px;
+    }
+
+    section.speakers>div>article>h3{
+        font-size: 2.1em;
+    }
+
+    section.speakers>div>article>p{
+        width: 100vw;
+        font-size: 1.8em;
+    }
+
+    section.speakers h2 {
+        flex-basis: 100%;
+        height: 20vh;
+        font-size: 4em;
+    }
+
+    section.schedule>div{
+        width: 920px;
+        height: auto;
+        padding: 30px;
+        display: flex;
+        flex-flow: column;
+        gap: 50px;
+    }
+
+    section.schedule>div>article>h3{
+        font-size: 2.1em;
+    }
+
+    section.schedule>div>article>p{
+        font-size: 1.8em;
+    }
+
+
+}
